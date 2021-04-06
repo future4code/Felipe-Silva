@@ -1,0 +1,25 @@
+body {
+    background-color: mintcream;
+}
+.cabecalho {
+    display: block;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.titulo {
+    font-size: 40px;
+    text-align: center;
+    font-style: oblique;
+    color: crimson;
+}
+.fotos {
+    width: 160px;
+}
+tr, th, td {
+    background-color: navajowhite;
+    text-align: center;
+    padding: 4px;
+    border-style:groove;
+    border-color: rgb(31, 41, 128);
+}
