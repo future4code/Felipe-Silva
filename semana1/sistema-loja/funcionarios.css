@@ -1,0 +1,35 @@
+body {
+    background-color: mintcream;
+}
+.titulo {
+    font-size: 40px;
+    text-align: center;
+    font-style: oblique;
+    color: crimson;
+}
+.cabecalho {
+    display: block;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.contatos {
+    background-color: rgb(138, 206, 138);
+    padding: 10px;
+    border: maroon;
+    border-radius: 8px;
+    margin-left: 8px;
+}
+h2 {
+    text-align: center;
+    text-shadow: 1.5px -1px 0;
+    font-weight:lighter;
+    font-size:x-large;
+    color: midnightblue;
+}
+li {
+    text-align: left;
+    font-size: 16px;
+    font-weight:lighter;
+    font-family:sans-serif;
+}

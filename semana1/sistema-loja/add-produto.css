@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(243, 243, 221);
+}
+.cabecalho {
+    display: block;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.titulo {
+    font-size: 40px;
+    text-align: center;
+    font-style: oblique;
+    color: crimson;
+}
+h2 {
+    font-size:xx-large;
+    color: rgb(132, 120, 145);
+}
+form {
+    margin-left: 8px;
+}
+#user-entry0 {
+    margin-left: 50px;
+    margin-bottom: 4px;
+}
+#user-entry1 {
+    margin-left: 4px;
+    margin-bottom: 4px;
+}
+#user-entry2 {
+    margin-left: 48px;
+    margin-bottom: 4px;
+}
+#user-entry3 {
+    margin-left: -3px;
+    margin-bottom: 4px;
+}
+button {
+    margin-left: 150px;
+}
