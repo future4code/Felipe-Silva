@@ -1,0 +1,15 @@
+body {
+    background-color: mintcream;
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-style: oblique;
+    color: crimson;
+}
+.cabecalho {
+    display: block;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-size: 16px;
+} 
