@@ -8,28 +8,32 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-    <header>
+    <header class='acesso-restrito'>
         <a href="http://127.0.0.1:5501/vendas.html" class='cabecalho'>Vendas</a>
         <a href="http://127.0.0.1:5501/ctrl-estoque.html" class='cabecalho'>Controle de Estoque</a>
         <a href="http://127.0.0.1:5501/add-produto.html" class='cabecalho'>Adicionar Produto</a>
         <a href="http://127.0.0.1:5501/funcionarios.html" class='cabecalho'>Funcionários</a>
     </header>
-
-    <div class='titulo'>
-        <h1>Bem-vind@ ao <em>Amazon Books</em>!</h1>
-        <p id='chamada'>Os melhores best-sellers a um clique</p>
+    <div class='logo'>
+        <img src='img/amz.gif' id='am_book' alt='Amazon Books'>
+    </div>
+    <div class='container'>
+        <div class='titulo'>
+            <h1>Bem-vind@ ao <em>Amazon Books</em>!</h1>
+            <p id='chamada'>Os melhores best-sellers a um clique</p>
+        </div>
+    
+        <div class='infos'>
+            <!-- ADICIONAR INFORMAÇOES SOBRE SUA LOJINHA -->
+            <h2>Compre agora e receba em até 5 horas!</h2>
+            <p>Não importa o lugar do Brasil em que estiver. Receba seu livro 
+               em até 5 horas após aprovado o pagamento.
+            </p>
+            <p>A melhor e mais completa loja virtual do país!</p>
+        </div>
     </div>
 
-    <div class='infos'>
-        <!-- ADICIONAR INFORMAÇOES SOBRE SUA LOJINHA -->
-        <h2>Compre agora e receba em até 5 horas!</h2>
-        <p>Não importa o lugar do Brasil em que estiver. Receba seu livro 
-           em até 5 horas após aprovado o pagamento.
-        </p>
-        <p>A melhor e mais completa loja virtual do país!</p>
-    </div>
-
-    <div class='destaques'>
+    <section>
         <img src="img/broken.jpg" class='books' alt="Broken">
         <img src="img/tempo.jpg" class='books' alt="Breve História do Tempo">
         <img src="img/diabo.jpg" class='books' alt="+ Esperto que o Diabo">
@@ -40,7 +44,7 @@
             <button id='btn3' title="Buy">Comprar</button>
             <button id='btn4' title="Buy">Comprar</button>
         </div>       
-    </div>
+    </section>
 
     <footer>
         <p><em><b>Siga-nos nas redes sociais!</b></em></p>
