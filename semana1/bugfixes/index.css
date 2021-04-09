@@ -1,0 +1,193 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+    font-family:Roboto; 
+}
+p, li, h3, td {
+    font-family:Roboto;
+}
+
+input {
+    height: 20px;
+    width: 500px;
+    border-radius: 10px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+button:focus {
+    color: white;
+}
+
+img {
+    width: 100px;
+}
+
+div>p:first-child {
+    display: inline;
+}
+
+div img {
+    background: none;
+}
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+}
+
+.container {
+    height: 500px;
+    text-align: center;
+    padding: 128px;
+}
+
+.icone {
+    height: 15px;
+}
+
+.icone:hover {
+    opacity: 0.4;
+}
+
+.icone:active {
+    opacity: 1.0;
+}
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+    background-color: #2274a5;
+    color: white;
+    text-align: center;
+    height: 25%;
+}
+
+#container-de-descricao>ol {
+    padding: 15px 0px;
+}
+ol {
+    width: 220px;
+    margin-left: 690px;
+}
+
+#container-para-comprar {
+    background-color: #e7eb90;
+    height: 25%;
+    padding-bottom: -890;
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;
+}
+
+.corpo {
+    background-color: #e7eb90;
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    padding-left: 180px;
+    padding-right: -20px;
+}
+table img {
+    width:40px;
+}
+
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+}
+td button:hover {
+    background-color: #d8b61d;
+}
+td button:active {
+    color: white;
+}
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;
+    text-align: center;
+}
+
+#back-button {
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+    margin-top: 300px;
+}
+
+#back-button:hover {
+    background-color: #c7c6c4
+}
+
+#lupa {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin: 0 auto 0 auto;
+    margin-left: 500px;
+}
+
+input {
+    margin-top: 20px;
+    position: absolute;
+    margin-left: -30px;
+}
+
+#voltar {
+    text-align: center;
+}
+
+.tabela {
+    text-align:center;
+}
