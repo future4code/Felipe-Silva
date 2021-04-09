@@ -1,0 +1,17 @@
+* {
+    margin-left: 0;
+    padding: 2px;
+}
+body {
+    background-color: rgb(243, 243, 221);
+}
+header {
+    position: sticky;
+    background-color: rgb(226, 191, 138);
+}
+.cabecalho {
+    display: block;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-size: 16px;
+}

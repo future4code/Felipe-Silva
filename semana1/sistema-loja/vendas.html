@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vendas</title>
+    <link rel="stylesheet" type="text/css" href="vendas.css">
+</head>
+<body>
+    <header>
+        <a href="http://127.0.0.1:5501/index.html" class='cabecalho'>Página Inicial</a>
+        <a href="http://127.0.0.1:5501/ctrl-estoque.html" class='cabecalho'>Controle de Estoque</a>
+        <a href="http://127.0.0.1:5501/add-produto.html" class='cabecalho'>Adicionar Produto</a>
+        <a href="http://127.0.0.1:5501/funcionarios.html" class='cabecalho'>Funcionários</a>
+        <a href='http://127.0.0.1:5501/hist_vendas.html' class='cabecalho'>Histórico de Vendas</a>
+    </header>
+    <form action="#">
+        <h2>Itens vendidos</h2>
+        <label for="livro">Livro:</label><br>
+        <input type="text" id="livro" name="livro" value=" "><br>
+        <label for='quantidade'>Quantidade:</label><br>
+        <input type='number' id='quantidade' name='quantidade'><br>
+        <label for="preço">Preço:</label><br>
+        <input type="float" id="preço" name="preço" value=" "><br>
+        <h7>Forma de pagamento:</h7><br>
+        <input type="radio" id="dinheiro" name="dinheiro" value="dinheiro">
+        <label for="dinheiro">Dinheiro</label><br>
+        <input type="radio" id="cartão" name="cartão" value="cartão">
+        <label for="cartão">Cartão</label><br><br>
+        <input type="submit" value="enviar">
+  </form> 
+  <ul>
+    <li>O Poder do Hábito (Charles Duhigg) - R$ 22.40 / dinheiro</li>
+    <li>1984 (George Orwell) - R$ 68.76 / cartão</li>
+    <li> Sapiens - Breve História da Humanidade (Yuval Harari) - R$ 54.20 / cartão</li>
+</ul>
+</body>
