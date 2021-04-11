@@ -9,88 +9,95 @@
 
   <body>
       <header>
-          <nav>
-            <a href="" id='men1'>Experiência</a>
-            <a href="" id='men2'>Cursos</a>
-            <a href="" id='men3'>Projetos</a>
-            <a href="" id='men4'>Redes Sociais</a>
-          </nav>
-        <h1>Felipe de Assis Gomes <br>
-        (Web Full Stack Labenu 2021)</h1>
-        <img id ="foto" src ="img/flp.jpg" width ="300px" alt="Felipe">
+        <nav>
+            <a href="#curriculo" >Experiência</a>
+            <a href="#cursos" >Cursos</a>
+            <a href="#projetos" >Projetos</a>
+            <a href="#redes1" >Redes Sociais</a>
+        </nav>
+          <div class='felipe'>
+            <h1>Felipe de Assis Gomes<br><br>(Web Full Stack Labenu 2021)</h1>
+            <img id ="foto" src ="img/flp.jpg" alt="Felipe">
+          </div>
+          <h4>Página desenvolvida na primeira semana de curso</h4>
       </header>
 
       <main>
-        <article class='perfil'>
-            <p><em>Formado em Comunicação Social com ênfase em Jornalismo, possuo experiência de 7 anos na área.</em> Também sou formado em Inglês pelo CCAA, onde tive oportunidade de lecionar, em São Paulo, nas unidades Santana e Tatuapé.<strong> Estou gostando bastante da área de desenvolvimento e tecnologia e quero atuar profissionalmente como programador.</strong> Nascido em Belo Horizonte/MG, onde resido atualmente.</p>
-            <h2>Habilidades</h2>
-            <ol>
-                <li>Facilidade de relacionamento: capacidade de auto-crítica e de ouvir</li>
-                <li>Dinamismo - postura proativa frente aos desafios</li>
-                <li>CSS e HTML - aprendizado constante com dedicação integral</li>
-            </ol>
-        </article>
-        <article class='curriculo'>
-            <h3><u>Experiência e Formação</h3></u>   
-        <ul>
-            <li>UFMG - Comunicação Social</li>
-            <li>Fatec-SP - Tecnologia em Mecânica(trancado)</li>
-            <li>Labenu - Desenvolvimento Full Stack</li>
-        </ul>
-        <ul>
-            <li>Federação dos Servidores de MG - Assessor de Comunicação</li>
-            <li>CCAA Tatuapé / Santana - Professor de Inglês</li>
-        </ul>
-        </article>
-        <div class='projetos'>
-            <table>
-                <th>Galeria de Projetos</th>
-                <tr>
-                    <td><a href='https://github.com/FelipeAssis27/paginalogin'>Página de Login</a></td>
-                    <td><img id='user' src='img/user.png' ></img></td>
-                    <td>Protótipo de página para permitir acesso restrito a usuário</td>
-                </tr>
-                <tr>
-                    <td><a href ='https://github.com/future4code/Felipe-Silva/blob/master/semana1/sistema-loja/index.html'>Loja Virtual</a></td>
-                    <td><img id='loja' src='img/loja.png'></img></td>
-                    <td>Protótipo de e-commerce em desenvolvimento pela Labenu</td>
-                </tr>
-            </table>
-        </div>
-        <form action="">
-        <div>
-            <label for="nome">Nome: </label>
-            <input type="text" id="nome" name="usuario">
-        </div>
-        <div>
-            <label for="mail">E-mail: </label>
-            <input type="email" id="mail" name="e-mail">
-        </div>
-        
-        <div>
-            <label for="texto">Mensagem: </label>
-            <input type="text" id="texto" name="mensagem">    
-            <button type="submit">Adicionar</button>
-        </div>
+          <div class='container'>
+              <article class='perfil'>
+                <p><em>Formado em Comunicação Social com ênfase em Jornalismo, possuo experiência de 7 anos na área.</em> Também sou formado em Inglês pelo CCAA, onde tive oportunidade de lecionar, em São Paulo, nas unidades Santana e Tatuapé.<strong> Estou gostando bastante da área de desenvolvimento e tecnologia e quero atuar profissionalmente como programador.</strong> Nascido em Belo Horizonte/MG, onde resido atualmente.</p>
+                <h2><b><u>Habilidades</b></u></h2>
+                <ol>
+                  <li>Facilidade de relacionamento: capacidade de auto-crítica e de ouvir</li>
+                  <li>Dinamismo - postura proativa frente aos desafios</li>
+                  <li>CSS e HTML - aprendizado constante com dedicação integral</li>
+                  <li>Git & GitHub - familiarização com os comandos do Git no terminal e com a plataforma de compartilhamento GitHub</li>
+                  <li>Python e Javascript - estudo em andamento das linguagens de programação Javascript e Python pela Udemy</li>
+                </ol>
+              </article>
 
-    </form>
+              <article id='curriculo'>
+                  <h3><u>Experiência e Formação</h3></u>   
+                  <ul>
+                      <li>UFMG - Comunicação Social</li>
+                      <li>Fatec-SP - Tecnologia em Mecânica(trancado)</li>
+                      <li>Labenu - Desenvolvimento Full Stack</li>
+                  </ul>
+                  <ul>
+                      <li>Federação dos Servidores de MG - Assessor de Comunicação</li>
+                      <li>CCAA Tatuapé / Santana - Professor de Inglês</li>
+                 </ul>
+             </article>
+
+             <article id='projetos'>
+                <table>
+                    <h2 id='galeria'>Galeria de Projetos</h2><br>
+                    <tr>
+                        <td><a href='https://github.com/FelipeAssis27/paginalogin'>Página de Login</a></td>
+                        <td><img id='user' src='img/user.png' ></img></td>
+                        <td>Protótipo de página para permitir acesso restrito a usuário</td>
+                    </tr>
+                    <tr>
+                        <td><a href ='https://github.com/future4code/Felipe-Silva/blob/master/semana1/sistema-loja/index.html'>Loja Virtual</a></td>
+                        <td><img id='loja' src='img/loja.png'></td>
+                        <td>Protótipo de e-commerce em desenvolvimento pela Labenu</td>
+                    </tr>
+                </table>
+
+                <h3 id='formulario'><em>Formulário para contato</em></h3>
+
+                <form action="">
+                    <label for="contato">Nome:</label>
+                    <input id='nome' type="text" id="contato" name="contato"><br>
+
+                    <label for="e-mail">E-mail: </label>
+                    <input id='e-mail' type="email" id="e-mail" name="e-mail"><br>
+                   
+                    <label for="fone">Telefone: </label>
+                    <input id='fone' type="tel" id="fone" name="fone"><br>
+                       
+                    <label for="data">Data: </label>
+                    <input id='data' type="date" id="data" name="data"><br>
+
+                    <button type="submit">Enviar</button>
+                </form>
+             </article>
+         </div>
+         <h3 id='redes1'><u>Redes Sociais</u></h3>
+         <a href='https://www.linkedin.com/in/felipeassisgomes/'><img src='img/linked.jpg' id='lnk' class='redes'></a>
+         <a href='https://www.instagram.com/assisfelipe.gomes/'><img src='img/insta.png' id='insta' class='redes'></a>
+         <a href='https://github.com/future4code/Felipe-Silva'><img src='img/git.png' id='git' class='redes'></a>
+         
       </main>
-
       
-        <footer>
-            <h3><u>Cursos Complementares</u></h3>
-            <ul>
-                <li>Sustentabilidade Aplicada aos Negócios - Orientação para Gestores, Fundação Getúlio Vargas (dezembro/2012) - concluída.</li>
-                <li>Logística Integrada, Ietec - Instituto de Educação Tecnológica (dezembro/2012) - concluída.</li>
-                <li>Inglês - básico, intermediário e avançado, CCAA (julho/2015) - concluído.</li>
-            </ul>
-            <h3>Redes Sociais</h3>
-            <ol>
-                <li link='https://www.linkedin.com/in/felipeassisgomes/'>LinkedIn</li>
-                <li link='https://www.instagram.com/assisfelipe.gomes/'>Instagram</li>
-                <li link='https://github.com/future4code/Felipe-Silva'>Github</li>
-            </ol>
-        </footer>
+    <footer>
+        <h3 id='cursos'><u>Cursos Complementares</u></h3>
+        <ul>
+            <li>Sustentabilidade Aplicada aos Negócios - Orientação para Gestores, Fundação Getúlio Vargas (dezembro/2012) - concluída.</li>
+            <li>Logística Integrada, Ietec - Instituto de Educação Tecnológica (dezembro/2012) - concluída.</li>
+            <li>Inglês - básico, intermediário e avançado, CCAA (julho/2015) - concluído.</li>
+        </ul>
+    </footer>
 
   </body>
 
