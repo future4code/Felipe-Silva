@@ -1,0 +1,24 @@
+nav {
+    background-color: pink;
+    display: flex;
+    width: 25vw;
+    height: 10vh;
+    justify-content: space-between;
+    
+}
+.icone-e-texto, .botao-nav {
+    background-color: pink;
+    display: flex;
+    width: 25vw;
+    height: 10vh;
+    align-items: center;
+}
+.icone {
+    width: 3vw;
+    display: flex;  
+}
+p {
+    font-size: 30px;
+    margin-left: 6px;
+}
+    
