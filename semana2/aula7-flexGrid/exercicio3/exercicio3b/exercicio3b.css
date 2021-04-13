@@ -6,13 +6,23 @@ body {
     font-size: 10px;
     color: white;
 }
-
+#top-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
 .green-background {
     background-color: green;
+    width: 15%;
+    height:5vh;
+    
+    
 }
 
 .yellow-background {
     background-color: yellow;
+    width: 85%;
+    height:5vh;
+    
 }
 
 .pink-background {
