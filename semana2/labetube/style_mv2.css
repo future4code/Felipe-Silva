@@ -28,34 +28,45 @@ header {
     border: none;
     font-size: 10px;
 }
+
 h3 {
     color: black; 
     margin-left: 12px;
 }
+
 main {
-    display: grid;
-    padding: 18px;
-    justify-items: center;
+    display: flex;
+    padding-bottom:23vh;
+    padding-top: 2vh;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
 }
+
 video {
-    width: 98vw;
-    height: 70vh;
+    width: 96vw;
+    height: 60vh;
 }
-#title {
-    display: grid;
-    justify-self: start;
-    padding: 10px;
-    margin-left: 290px;
+
+#title{
+    color: black;
+    display: flex;
+    flex-direction:column;
+    width: 70vw;
+    height: 5vh;
+    justify-content: flex-end;
 }
 h4 {
-    color: black;
+    margin-left: 22vw;
 }
+
 footer {
     background-color: rgb(94, 93, 93);
     height: 5vh;
     display: grid;
     align-content: center;
 }
+
 h2 {
     margin-left: 12px;
 }
