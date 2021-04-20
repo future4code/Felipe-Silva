@@ -4,5 +4,5 @@
 */
 
 /*
-serão impressos os valores (20, 10, 10)
+serão impressos os valores (10, 10, 10)
 */
