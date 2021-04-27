@@ -86,10 +86,97 @@ par(2);
 
 // desafios 
 // 1 a) 
-const beautifulGirl = (param) => {
-    console.log('O parametro da função é: ', param);
+const imprimir = (param) => {
+    console.log(param);
 }
-beautifulGirl('Roberta');
+imprimir(33);
 //b)
+const noReturn = (n1, n2) => {
+    let add = n1 + n2;
+    imprimir(add)
+}
+noReturn(33,44);
 
+//2 - a)
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13];
+function array(numeros) {
+    let pares = [];
+    for(i=0; i<numeros.length; i++) {
+        if (numeros[i] % 2 === 0) {
+            numeros[i] *= 2;
+            pares.push(numeros[i]);
+        }
 
+    }
+    return pares;
+}
+array(numeros);
+
+// (resolução amanda)
+/* for ... of - passa por todos os itens sem iterar! 
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13];
+function multArrayPares(arrayNumeros) {
+    let pares = [];
+    for(let i of arrayNumeros) {
+        if (i % 2 === 0) {
+            pares.push(i * 2);
+        }
+
+    }
+    return pares;
+}
+multArrayPares(numeros);
+*/ 
+
+//b)
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13];
+function maiorDoArray(arrayNumeros) {
+    let maior = 0;
+    for (i=0; i < arrayNumeros.length; i++) {
+        if (arrayNumeros[i] > maior) {
+            maior = arrayNumeros[i];
+        }
+    }
+    return maior;
+}
+maiorDoArray(numeros);
+/* (solução amanda)
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13];
+function maiorDoArray(arrayNumeros) {
+let maior = arrayNumeros[0];
+for (i=0; i < arrayNumeros.length; i++) {
+*** se fosse 'for...of' compararia sempre o [0] com o elem. subsequente.
+    if(arrayNumeros[i] > maior) {
+        maior = arrayNumeros[i];
+    }
+}
+return maior;
+}
+maiorDoArray(numeros);
+*/
+
+//c) (*** for ... in  -> itera!)
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13];
+function maiorIndice(arrayNums) {
+    let majorIndex;
+    let maior = 0;
+    for (let i in arrayNums) {
+        if (maior <= arrayNums[i]) {
+            maior = arrayNums[i];
+            majorIndex = i;
+        }
+    }
+    return majorIndex;
+}
+maiorIndice(numeros);
+// d)
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13];
+function arrayReverse(invertidos) {
+    let arrayInvert = [];
+    //(*** tamanho da var; condição de parada; decrem)
+    for (let i = invertidos.length - 1; i >= 0; i--) {
+        arrayInvert.push(invertidos[i]);            
+        }
+        return arrayInvert;
+    }
+console.log(arrayReverse(numeros));
