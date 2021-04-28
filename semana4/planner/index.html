@@ -24,13 +24,16 @@
             </select>
         </form>
 
-        <button onclick = 'criarTarefa()'>Criar tarefa</button>
+        <button onclick='criarTarefa()' onclick='addTask()'>Criar tarefa</button>
         
     </header>
     <section>
         <div class="semana">
             <h3>Domingo</h3>
-            <div id="domingo"></div>
+            <div id="domingo">
+                <ul id='itens'>
+                </ul>
+            </div>
         </div>
 
         <div class="semana">
