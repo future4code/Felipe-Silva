@@ -1,0 +1,51 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    border: 1px solid black;
+}
+#main-container {
+    display: grid;
+    height: 100%;
+    width:100%;
+    grid-template-rows: 60px 1fr 1fr 2fr 1fr 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+#first-block {
+    background-color: red;
+    grid-column: 1 / span 4;
+}
+
+.blue-block {
+    background-color: blue;
+    grid-column: 1 / 2;
+   
+}
+
+.yellow-block {
+    background-color: yellow;
+    grid-column: 2 / 3;
+   
+}
+
+.green-block {
+    background-color: green;
+    grid-column: 3 / 4;
+   
+}
+
+.black-block {
+    background-color: black;
+    color: white;
+    grid-row: 4 / 5;
+}
+
+.white-block {
+    background-color: white;
+    grid-row: 5 / 6; 
+}

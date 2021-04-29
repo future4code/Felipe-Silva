@@ -188,6 +188,10 @@ if (game == "DO") {
   console.log(`Valor unitário: ${unity}`);
   console.log(`Preço da compra: ${price}`);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> master
 
 //aula 13 (sexta, 23/04)
 
@@ -305,3 +309,8 @@ if (kicks == key) {
 }
 
 alert(`O número de tentativas foi: ${count}`);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> master
+>>>>>>> master

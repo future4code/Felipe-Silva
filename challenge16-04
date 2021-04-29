@@ -1,0 +1,4 @@
+let num = console.log("Digite um número");
+let anterior = num - 1;
+ console.log("O seu antecessor é  anterior")
+

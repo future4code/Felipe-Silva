@@ -1,0 +1,85 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+div {
+    border: 1px solid black;
+    padding: 0.5vw;
+}
+#main-container {
+    width: 98vw;
+    height:98vh;
+    border: none;
+}
+#first-block {
+    background-color: red;
+    display: flex; 
+    height: 7vh;
+    flex-wrap: wrap;
+    margin-bottom: 0.5vh;
+    border:none;
+}
+#brasil {
+    border:none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.blue-block {
+    background-color: blue;
+    height: 10vh;
+    width: 30vw;
+}
+.yellow-block {
+    background-color: yellow;
+    height: 10vh;
+    width: 30vw;
+    margin-bottom: 2vh;
+}
+.green-block {
+    background-color: green;
+    height: 10vh;
+    width: 30vw;
+    margin-bottom: 2vh;
+}
+#dark-box {
+    border:none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 0vh;
+}
+.black-block {
+    background-color: black;
+    color: white;
+    height: 30vh;
+    width: 46.5vw;
+}
+#light-box{
+    border:none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.white-block {
+    background-color: white;
+    height: 10vh;
+    width: 30vw; 
+}
+@media screen and (max-device-width: 800px) {
+    .blue-block, .yellow-block, .white-block, .black-block {
+        width:46vw;  
+        margin-bottom: 1vh;
+    }
+    .green-block, #snow {
+        width: 100vw;
+        margin-bottom: 1vh;
+    }
+}
+@media screen and (max-device-width: 420px) {
+    .blue-block, .yellow-block, .green-block, .black-block, .white-block {
+        width:100vw;  
+    }
+}
