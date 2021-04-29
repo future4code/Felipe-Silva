@@ -9,8 +9,8 @@ function imprimirDespesas(despesas){
     divDespesas.innerHTML = '<p><u>Despesas Detalhadas</u></p>'
 
     // AQUI VEM A IMPLEMENTAÇÃO
-    despesas.map((gasto)=>{
-        divDespesas.innerHTML += `<p>Valor: R$${gasto.valor}</p> <p>Tipo: ${gasto.tipo}</p> <p>Descrição: ${gasto.descricao}</p>`
+    despesas.map((custo)=>{
+        divDespesas.innerHTML += `<>Valor: R$${custo.valor} | Tipo: ${custo.tipo} | Descrição: ${custo.descricao}</p>`
     })
     console.log(arrDespesas)
 }
@@ -26,7 +26,20 @@ function imprimirExtrato(){
 
 
     // AQUI VEM A IMPLEMENTAÇÃO
-
+    arrDespesas.forEach((gasto) =>{
+        switch(gasto.tipo){
+            case 'alimentação':
+                gastoAlimentacao += gasto.valor
+                break;
+            case 'utilidades':
+                gastoUtilidades += gasto.valor
+                break;
+            case 'viagem':
+                gastoViagem += gasto.valor
+            break;
+        }
+    })
+    gastoTotal = gastoAlimentacao + gastoUtilidades + gastoViagem;
     divExtrato.innerHTML = `<p>Extrato: Gasto Total: R$${gastoTotal} | Alimentação: R$${gastoAlimentacao} | 
                                         Utilidades: R$${gastoUtilidades} | Viagem: R$${gastoViagem}</p>`
 }
@@ -75,10 +88,23 @@ function filtrarDespesas(){
     let valorMin = Number(document.getElementById('valorFiltroMin').value)
     let valorMax = Number(document.getElementById('valorFiltroMax').value)
 
+    //desafio1
+    if (valorMin < 0 || valorMax < 0) {
+        alert('Valor inválido!');
+        valorMin.value = '';
+        valorMax.value = '';
+    }
+    /*if (tipoFiltro.value == "" || valorMin.value == '' ||valorMax.value =='') {
+        alert('Preencha todos os campos!')
+    }*/
 
-    let despesasFiltradas // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
-
-    imprimirDespesas(despesasFiltradas)
+// AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
+    let despesasFiltradas = arrDespesas.filter((item) =>{
+        if(item.tipo === tipoFiltro && item.valor >= valorMin && item.valor <= valorMax){
+            return true
+        } 
+    })  
+    imprimirDespesas(despesasFiltradas)   
 }
 
 
