@@ -4,7 +4,6 @@ function criarTarefa() {
     let task = document.getElementById('tarefa');
     //3)
     let diasDaSemana = document.getElementById('dias-semana');
-    let diaEscolhido = diasDaSemana.value;
     
     //4)
     //console.log(task.value)
@@ -15,12 +14,13 @@ function criarTarefa() {
 if (task.value !==''){
     switch (diasDaSemana.value) {
         case "domingo":
-            diaEscolhido.innerHTML += `<p>${task.value}</p>`;
-            diaEscolhido.innerHTML += `<p onclick='scratchText(this)'>${task.value}</p>`;
+            const day1 = document.getElementById('itens')
+            day1.innerHTML += `<li onclick='scratchText(this)'>${task.value}</li>`;
             break;
+/*
         case "segunda":
             diaEscolhido.innerHTML += `<p>${task.value}</p>`;
-            diaEscolhido.innerHTML += `<p onclick='scratchText(this)'>${task.value}</p>`;
+            diaEscolhido.innerHTML += `<p >${task.value}</p>`;
             break;
         case "terca":
             diaEscolhido.innerHTML += `<p>${task.value}</p>`;
@@ -42,7 +42,7 @@ if (task.value !==''){
             diaEscolhido.innerHTML += `<p>${task.value}</p>`;
             diaEscolhido.innerHTML += `<p onclick='scratchText(this)'>${task.value}</p>`;
             break;
-        }
+    */ }
     } else {
         alert("Por favor, insira uma tarefa!");
     }    
@@ -55,8 +55,8 @@ function scratchText(risk) {
     risk.style = 'text-decoration: line-through';
 }
 function addTask() {
-    const meuInput = document.getElementById('tarefa')
+    const meuInput = document.getElementById('tarefa').value
     const taskItems = document.getElementById('itens')
 
-    taskItems.innerHTML += `<li>${meuInput.value}</li>`
+    itens.innerHTML += `<li>${meuInput}</li>`
 }
