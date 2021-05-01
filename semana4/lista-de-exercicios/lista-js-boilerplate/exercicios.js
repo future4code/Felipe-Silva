@@ -38,7 +38,7 @@ console.log(retornaNumerosPares([8, 18, 11, 33, 16]));
 //Exercício 4
 
 function retornaMaiorNumero(array) {
-   let majorArr = 0;
+   let majorArr = array[0];
    for (i in array) {
       if (array[i] > majorArr){
          majorArr = array[i];
@@ -46,43 +46,123 @@ function retornaMaiorNumero(array) {
    }
    return majorArr;
 }
-console.log(retornaMaiorNumero([-100, 10, -14, 8]));
+console.log(retornaMaiorNumero([-100, -10, -14, -8]));
 
 //Exercício 5
 
 function retornaQuantidadeElementos (array) {
-   // implemente sua lógica aqui
+   return array.length;
+  /* let arrayIndex = 0;
+   for (i of array){
+      arrayIndex += 1;
+   }
+   return arrayIndex;  */ 
 }
+console.log(retornaQuantidadeElementos([0, 12, 2, 3]));
 
 //Exercício 6
 
 function retornaExpressoesBooleanas() {
-   // implemente sua lógica aqui
+   const arrayBoolean = [false, false, true, true, true];
+   return arrayBoolean;
 }
+console.log(retornaExpressoesBooleanas());
 
 //Exercício 7
 
 function retornaNNumerosPares(n) {
-   // implemente sua lógica aqui
+   const arrayNum = [];
+   for (nums = 0; arrayNum.length < n; nums++){
+      if(nums % 2 ===0){
+         arrayNum.push(nums);
+      }
+   }
+   return arrayNum;
 }
+console.log(retornaNNumerosPares(22));
 
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
-  // implemente sua lógica aqui
-}
+   let triangle;
+   if ((a === b) && (a===c)){
+      triangle = 'equilátero';
+   } else if (((a===b) && (a!==c)) || ((a!==b) && (b===c)) || ((a===c) && (a!==b))){
+      triangle = 'isósceles';
+   } else {
+      triangle = 'escaleno';
+   }
+   return triangle;
+  }
+  console.log(checaTriangulo(12,14,22));
+  
 
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
-   // implemente sua lógica aqui
-}
+   let maiorNumero;
+   let maiorDivisivelporMenor;
+   let menorNumero;
 
-// Exercício 10
+   if(num1 > num2) {
+      maiorNumero = num1;
+      menorNumero = num2;
+   } else if(num1 < num2) {
+      maiorNumero = num2;
+      menorNumero = num1;
+   } else {
+      maiorNumero = num1;
+      menorNumero = num1;
+   }
+
+   maiorDivisivelporMenor = maiorNumero % menorNumero === 0;
+   const diferenca = maiorNumero - menorNumero;
+
+   return {
+      maiorNumero: maiorNumero,
+      maiorDivisivelporMenor: maiorDivisivelporMenor,
+      diferenca: diferenca
+    }
+  }
+  console.log(comparaDoisNumeros(0,0));
+
+// Exercício 10 (não entendi)
 
 function segundoMaiorEMenor(array) {
-   // implemente sua lógica aqui
+   let menor = Infinity;
+   let maior = -Infinity;
+   let segundoMenor = Infinity;
+   let segundoMaior = -Infinity;
+   let indiceMenor = 0;
+   let indiceMaior = 0;
+   let novoArray = [];
+
+   for (let i of array) {
+      if(i < menor){
+         menor = i;
+         indiceMenor = array[menor];
+      }
+      if (i > maior) {
+         maior = i;
+         indiceMaior = array[maior];
+      }
+   }
+   array.splice(indiceMaior,1)
+   array.splice(indiceMenor, 1)
+
+   for(let i of array){
+      if(i < segundoMenor){
+         segundoMenor = i;
+      }
+      if(i > segundoMaior){
+         segundoMaior = i;
+      }
+   }
+   novoArray.push(segundoMaior);
+   novoArray.push(segundoMenor);
+   return novoArray;
 }
+console.log(segundoMaiorEMenor([4, 66, -6626, 0, 133, 33, 36, -669]));
 
 //Exercício 11
 
