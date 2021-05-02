@@ -84,8 +84,17 @@ console.log(retornaNNumerosPares(22));
 // Exercício 8
 
 function checaTriangulo(a, b, c) {
+      
    let triangle;
-   if ((a === b) && (a===c)){
+   if(a !== b && b !== c) {
+      return'Escaleno'
+     } else if(a === b && b === c) {
+       return'Equilátero'
+      } else {
+        return'Isósceles'
+      }
+    }
+   /* if ((a === b) && (a===c)){
       triangle = 'equilátero';
    } else if (((a===b) && (a!==c)) || ((a!==b) && (b===c)) || ((a===c) && (a!==b))){
       triangle = 'isósceles';
@@ -93,7 +102,8 @@ function checaTriangulo(a, b, c) {
       triangle = 'escaleno';
    }
    return triangle;
-  }
+  } */
+
   console.log(checaTriangulo(12,14,22));
   
 
@@ -126,30 +136,36 @@ function comparaDoisNumeros(num1, num2) {
   }
   console.log(comparaDoisNumeros(0,0));
 
-// Exercício 10 (não entendi)
+// Exercício 10 
 
 function segundoMaiorEMenor(array) {
    let menor = Infinity;
-   let maior = -Infinity;
+   let maior = 0;
    let segundoMenor = Infinity;
-   let segundoMaior = -Infinity;
+   let segundoMaior = 0;
    let indiceMenor = 0;
    let indiceMaior = 0;
    let novoArray = [];
 
+   //capturando os elementos maiores e menores
    for (let i of array) {
+      //'i' captura o numero em si, não o index
       if(i < menor){
          menor = i;
-         indiceMenor = array[menor];
+         indiceMenor = array.indexOf(menor);
       }
       if (i > maior) {
          maior = i;
-         indiceMaior = array[maior];
+         indiceMaior = array.indexOf(maior);
       }
    }
+   //retira o elemento de maior indice e menor
    array.splice(indiceMaior,1)
    array.splice(indiceMenor, 1)
-
+   //--- 1º retirou os elm maior e menor.
+   
+   //aqui, imprime o maior e menor (antes, 2º maior e menor)
+   // captura o 1º elm e compara com os seguintes, substituindo se atende condição
    for(let i of array){
       if(i < segundoMenor){
          segundoMenor = i;
@@ -162,37 +178,90 @@ function segundoMaiorEMenor(array) {
    novoArray.push(segundoMenor);
    return novoArray;
 }
-console.log(segundoMaiorEMenor([4, 66, -6626, 0, 133, 33, 36, -669]));
+console.log(segundoMaiorEMenor([0, -2, 1, 3]));
 
 //Exercício 11
-
 function ordenaArray(array) {
-   // implemente sua lógica aqui
+   const len = array.length;
+   for (j = 0; j < array.length; j++){
+      for(i = 0; i < array.length; i++){
+         if (array[i] > array[i+1]){
+            //troca de posição
+            let tmp = array[i];
+            array[i] = array[i+1];
+            array[i+1] = tmp;
+         }
+      }
+   }
+   return array;
 }
+console.log(ordenaArray([7,-77, 6, 5, 4, 13, 44, 66, 897, 22]));
+
 
 // Exercício 12
 
 function filmeFavorito() {
-   // implemente sua lógica aqui
+   const filme = {
+      nome:'O Diabo Veste Prada',
+      ano: 2006,
+      diretor: 'David Frankel',
+      atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci']
+   }
+   return filme;
 }
+console.log(`O filme favorito do astrodev é: ${filmeFavorito}`);
 
 // Exercício 13
 
 function imprimeChamada() {
-   // implemente sua lógica aqui
+   const filme = {
+      nome:'O Diabo Veste Prada',
+      ano: 2006,
+      diretor: 'David Frankel',
+      atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci']
+   }
+   /*let actors = '';
+   //p/ pegar o ultimo nome, sem espaço no final
+   for (i = 0; i < filme.atores.length; i++) {
+      if (i === filme.atores.length - 1){
+         actors += filme.atores[i]
+         // pega os elementos em sequencia
+      } else {
+         actors += filme.atores[i] + ', '
+      }
+   }*/
+   return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor}, estrelado por ${filme.atores}.`
 }
+console.log(imprimeChamada());
 
 // Exercício 14
 
 function criaRetangulo(lado1, lado2) {
-   // implemente sua lógica aqui
+   const retangulo = {
+      largura: lado1,
+      altura: lado2,
+      perimetro: 2 * (lado1 + lado2),
+      area: lado1 * lado2
+   }
+   return retangulo;
 }
+console.log(criaRetangulo(8,6));
 
 // Exercício 15
 
 function anonimizaPessoa(pessoa) {
-   // implemente sua lógica aqui
+   const person = {
+      nome: "Astrodev",
+      idade: 25,
+      email: "astrodev@future4.com.br",
+      endereco: "Rua do Futuro, 4"
+   }
+   return {
+      ...person,
+      nome: 'Anônimo'
+   } 
 }
+console.log(anonimizaPessoa());
 
 // Exercício 16
 
@@ -206,32 +275,57 @@ const arrayDePessoas = [
 // Exercício 16, letra A
 
 function maioresDe18(arrayDePessoas) {
-   // implemente sua lógica aqui
+   //o param. ja chama cada item do objeto, com suas prop.
+   const adultos = arrayDePessoas.filter((pessoa) => {
+      return pessoa.idade >= 18
+   })
+   return adultos;
 }
+console.log(maioresDe18(arrayDePessoas));
 
 // Exercício 16, letra B
 
 function menoresDe18(arrayDePessoas) {
-   // implemente sua lógica aqui
+   const criancas = arrayDePessoas.filter((pessoa) => {
+      return pessoa.idade < 18
+   })
+   return criancas;
 }
+console.log(maioresDe18(arrayDePessoas));
 
 // Exercício 17, letra A
 
 function multiplicaArrayPor2(array) {
-   // implemente sua lógica aqui
+   const doubleArr = array.map((i) => {
+      return i*2;      
+   })
+   return doubleArr;
 }
+console.log(multiplicaArrayPor2(array));
 
 // Exercício 17, letra B
 
 function multiplicaArrayPor2S(array) {
-  // implemente sua lógica aqui
+   const doubleArr = array.map((i) => {
+      return (i*2).toString();      
+   })
+   return doubleArr;
 }
+console.log(multiplicaArrayPor2(array));
 
 // Exercício 17, letra C
 
 function verificaParidade(array) {
-   // implemente sua lógica aqui
+   const checkArray = array.map((i) => {
+      if (i % 2 === 0) {
+         return `${i} é par`;
+      } else {
+         return `${i} é ímpar`;
+      }
+   })
+   return checkArray;
 }
+console.log(verificaParidade(array));
 
 // Exercício 18
 
@@ -247,15 +341,43 @@ const pessoas = [
 //Exercício 18, letra A
 
 function retornaPessoasAutorizadas() {
-   // implemente sua lógica aqui
+   let pessoasAutorizadas = [];
+   for(const pessoa of pessoas) {
+     if(pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60) {
+       pessoasAutorizadas.push(pessoa)
+     }
+   }
+   return pessoasAutorizadas;
 }
+console.log(retornaPessoasAutorizadas());
+  /* const peopleAllowed = pessoas.filter((pessoa) => {
+      return (pessoa.idade > 14 && pessoa.idade < 60 && pessoa.altura >= 1.5);
+   })
+   return peopleAllowed;
+}
+console.log(retornaPessoasAutorizadas()); */
+
 
 
 // Exercício 18, letra B
 
 function retornaPessoasNaoAutorizadas() {
-   // implemente sua lógica aqui
+   let pessoasNaoAutorizadas = [];
+   for(const pessoa of pessoas) {
+     if(pessoa.altura <= 1.5 || pessoa.idade < 14 || pessoa.idade > 60){
+       pessoasNaoAutorizadas.push(pessoa);
+     }
+   }
+   return pessoasNaoAutorizadas;
 }
+console.log(retornaPessoasNaoAutorizadas());
+/* function retornaPessoasNaoAutorizadas() {
+   const peopleNotAllowed = pessoas.filter((pessoa) => {
+      return (pessoa.idade < 14 || pessoa.idade > 60 || pessoa.altura < 1.5);
+   })
+   return peopleNotAllowed;
+}
+console.log(retornaPessoasNaoAutorizadas()); */
 
 //Exercício 19
 
@@ -269,8 +391,18 @@ const consultasNome = [
  //Exercício 19, letra A
  
  function ordenaPorNome() {
-  
+   for(let i = 0; i < consultasNome.length; i++) {
+      for(let j = 0; j < consultasNome.length - i - 1; j++) {
+        if(consultasNome[j].nome > consultasNome[j + 1].nome) {
+          const temp = consultasNome[j]
+          consultasNome[j] = consultasNome[j + 1]
+          consultasNome[j + 1] = temp
+        }
+      }
+    }
+    return consultasNome  
  }
+ console.log(ordenaPorNome());
  
  // Exercício 19, letra B
  
