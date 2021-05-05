@@ -2,6 +2,11 @@ import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import CardPequeno from './components/CardPequeno/CardPequeno';
+import ProfilePic from './imagens/pic.jpg';
+import LogoLab from './imagens/labenu.png';
+import Insta from './imagens/insta.png';
+import ProfProfile from './imagens/prof.jpeg'; 
 
 function App() {
   return (
@@ -9,9 +14,17 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem="/home/felipe/Felipe-Silva/semana5/aula19/labedin/imagens/1620153253706.jpg" 
+          imagem={ProfilePic} 
           nome="Felipe Assis" 
           descricao="Oi, eu sou o Felipe. Sou estudante de desenvolvimento web na Labenu."
+        />
+        
+        <CardPequeno
+        imagem = "https://e7.pngegg.com/pngimages/11/626/png-clipart-signal-telephone-call-computer-icons-technology-template-electronics.png"
+        nome="Contato"
+        endereco="Lagoa Santa - MG"
+        telefone = "(31) 99911 - 4404"
+        email = "felipedev.programacao@gmail.com"
         />
         
         <ImagemButton 
@@ -23,15 +36,15 @@ function App() {
       <div className="page-section-container">
         <h2>Experiências profissionais</h2>
         <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Labenu" 
+          imagem={ProfProfile}
+          nome="Formação" 
           descricao="Formado em Comunicação Social. Trabalhei por 7 anos na área. Hoje, procuro uma oportunidade em programação. Esse novo desafio vai contribuir para meu aperfeiçoamento profissional e humano." 
         />
         
         <CardGrande 
-          imagem="https://imagens.canaltech.com.br/empresas/4418.400.jpg" 
-          nome="NASA" 
-          descricao="Apontando defeitos." 
+          imagem={LogoLab} 
+          nome="LABENU" 
+          descricao="A experiência na Labenu tem sido desafiadora. A cada dia tenho de superar meus limites e aprender um pouco mais." 
         />
       </div>
 
@@ -43,8 +56,8 @@ function App() {
         />        
 
         <ImagemButton 
-          imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
-          texto="Twitter" 
+          imagem={Insta}
+          texto="Instagram" 
         />        
       </div>
     </div>
