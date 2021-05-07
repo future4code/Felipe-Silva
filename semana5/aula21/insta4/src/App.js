@@ -91,10 +91,10 @@ class App extends React.Component {
   render() {
     const listaDeUsuarios =this.state.usuarios.map((usuario) => {
       return (
-        <Post key={post.nomeUsuario}
-          nomeUsuario={post.nomeUsuario}
-          fotoUsuario={post.fotoUsuario}
-          fotoPost={post.fotoPost}
+        <Post key={usuario.nomeUsuario}
+          nomeUsuario={usuario.nomeUsuario}
+          fotoUsuario={usuario.fotoUsuario}
+          fotoPost={usuario.fotoPost}
         />
       );
     });
