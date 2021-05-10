@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Step2 = styled.div `
+const Passo2 = styled.div `
 text-align: center;
 background-color: #282c34;
 min-height: 100vh;
@@ -15,13 +15,13 @@ color: white;
 export class Step2 extends React.Component {
     render() {
         return (
-            <Step2>
+            <Passo2>
                 <h3>SE VOCÊ ESTÁ CURSANDO OU JÁ TERMINOU O ENSINO SUPERIOR</h3>
                 <h6>5. Qual o curso?</h6>
                 <input type="text"></input>
                 <h6>6. Qual a unidade de ensino?</h6>
                 <input type="text"></input>
-            </Step2>
+            </Passo2>
         )
     }
 }

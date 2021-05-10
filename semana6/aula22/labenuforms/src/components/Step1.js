@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Step1 = styled.div `
+const Passo1 = styled.div `
 text-align: center;
 background-color: #282c34;
 min-height: 100vh;
@@ -15,7 +15,7 @@ color: white;
 export class Step1 extends React.Component {
   render() {
     return (
-      <Step1>
+      <Passo1>
         <h3>DADOS GERAIS</h3>
         <h6>1. Qual o seu nome?</h6>
         <input type="text"></input>
@@ -30,7 +30,7 @@ export class Step1 extends React.Component {
           <option value="C">Ensino Superior Incompleto</option>
           <option value="A">Ensino Superior Completo</option>
         </select>
-      </Step1>
+      </Passo1>
     );
   }
 }

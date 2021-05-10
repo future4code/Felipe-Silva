@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Final = styled.div `
+const Fim = styled.div `
 text-align: center;
 background-color: #282c34;
 min-height: 100vh;
@@ -15,10 +15,10 @@ color: white;
 export class Final extends React.Component {
     render() {
         return (
-            <Final>
+            <Fim>
                 <h3>FIM DO FORMULÁRIO</h3>
                 <h6>Obrigado! Agradecemos o envio dos dados. Faremos contato em breve!</h6>
-            </Final>
+            </Fim>
         )
     }
 }
