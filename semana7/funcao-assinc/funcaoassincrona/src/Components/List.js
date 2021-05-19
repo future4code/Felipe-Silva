@@ -19,9 +19,9 @@ export default class List extends React.Component {
     }
 
 
-    getUsers = () => {
+    getUsers = async() => {
         const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users'
-        axios.get(url, {
+        /*axios.get(url, {
             headers:{
                 Authorization: 'Felipe-Silva-paiva'
             }
@@ -33,13 +33,25 @@ export default class List extends React.Component {
         .catch((err)=> {
             alert('Solicitação não registrada. Tente novamente.')
 
-        })
+        })*/
+        try {
+            const res = await axios.get(url, {
+                headers: {
+                    Authorization: 'Felipe-Silva-paiva'
+                }
+            })
+            this.setState({ users:res.data})
+
+        } catch (err) {
+            alert("Erro! Tente novamente em alguns isntantes.")
+        }
 
     }
-    deleteUser = (id) => {
-        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/:${id}`
+
+    deleteUser = async(id) => {
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`
         
-        axios.delete(url, {
+        /*axios.delete(url, {
             headers:{
                 Authorization: 'Felipe-Silva-paiva'
             }
@@ -53,7 +65,18 @@ export default class List extends React.Component {
         .catch((err) =>{
             alert('Erro! Tente novamente em alguns instantes.')
             
-        })
+        })*/
+        try {
+            const res = await axios.delete(url, {
+                headers: {
+                    Authorization: 'Felipe-Silva-paiva'
+                }
+            })
+            this.getUsers()
+
+        } catch (err) {
+            alert("Erro! Tente novamente em alguns isntantes.")
+        }
     }
 
     render(){
