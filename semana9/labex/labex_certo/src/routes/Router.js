@@ -8,7 +8,6 @@ import TripDetailsPage from "../pages/TripDetailsPage";
 import FormPage from "../pages/FormPage";
 import ListTripsPage from "../pages/ListTripsPage";
 
-
 const Router = () => {
     return (
       <BrowserRouter>
@@ -39,6 +38,10 @@ const Router = () => {
 
           <Route exact path ="/admin/trips/detail">
             <TripDetailsPage />
+          </Route>
+
+          <Route>
+            <h4>A página não existe.</h4>
           </Route>
 
         </Switch>
