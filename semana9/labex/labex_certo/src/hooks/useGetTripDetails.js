@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const useGetTripDetails = (url, initialState) => {
     const [tripDetails, setTripDetails] = useState(initialState);
+    const token = localStorage.getItem("token");
 
     useEffect(() => {
         const header = {

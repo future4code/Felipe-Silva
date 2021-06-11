@@ -1,27 +1,19 @@
-import React from "react";
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { goToAdminHome, goToListTripsPage } from '../../routes/Coordinator';
 
+function HomePage() {
+  const history = useHistory();
 
-const HomePage = () => {
-    const history = useHistory ();
-    
-    const goToListTripsPage = () => {
-        history.push('/trips/list');
-    }
-
-    const goToAdminPage = () => {
-        history.push('/admin/trips/list');
-    }
-
-    return (
+  return (
+    <div>
+      <h1>LabeX - Torne-se um viajante interestelar!</h1>
       <div>
-        <h3>Labex - Torne-se um viajante interestelar!</h3>
-        <button onClick={goToListTripsPage}>Escolha sua próxima viagem</button>
-        <button onClick={goToAdminPage}>Gerenciar viagens</button>
+        <button onClick={() => {goToListTripsPage(history)}}>Lista de viagens</button>
+        <button onClick={() => {goToAdminHome(history)}}>Gerenciar viagens</button>
       </div>
-    );
-  }
-  
-  export default HomePage;
+    </div>
+  );
+};
+
+export default HomePage;
