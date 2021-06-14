@@ -26,6 +26,7 @@ function ImagemButton(props) {
         <ImgButtonContainer>
             <img src={ props.imagem }/>
             <p>{ props.texto }</p>
+            <p>{ props.url }</p>
         </ImgButtonContainer>
    
 
