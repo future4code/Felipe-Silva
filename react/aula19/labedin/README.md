@@ -1,0 +1,1 @@
+Repassando aula 19 (semana 5). Conceito de props e styled-components. 
