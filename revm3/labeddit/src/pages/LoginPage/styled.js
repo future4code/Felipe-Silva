@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const LogoImage = styled.img`
-  width: 7vh;
-  max-width: 350px;
+  width: 70vh;
+  max-width: 320px;
 `;
 
 export const Title = styled.p`
@@ -33,7 +33,7 @@ export const LoginFormContainer = styled.div`
   margin-bottom: 20px;
 `;
 
-export const InputContainer = styled.div`
+export const InputsContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 70vw;

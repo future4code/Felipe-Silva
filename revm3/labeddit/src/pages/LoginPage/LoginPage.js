@@ -1,25 +1,35 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import login from "../../assets/login.jpeg";
+import { useHistory } from "react-router";
+import { goToSign } from "../../routes/coordinator";
 import {
-    LogoImage,
-    ScreenContainer,
-    Title,
-    LogoContainer,
-    SignUpButtonContainer,
-  } from "./styled";
+  LogoImage,
+  ScreenContainer,
+  LogoContainer,
+  SignUpButtonContainer,
+} from "./styled";
+import { Button } from "@material-ui/core";
+import LoginForm from "./LoginForm";
 
 const LoginPage = () => {
+    const history = useHistory();
   return (
-    <div>
-      <h1>LoginPage</h1>
-      <Button variant="contained" color="primary">
-        Login
-      </Button>
-      <Button variant="contained" color="secondary">
-        Cadastre-se
-      </Button>
+    <ScreenContainer>
+      <LogoContainer>
+        <LogoImage src={login} />
+      </LogoContainer>
+      <LoginForm />
       
-    </div>
+        <Button
+          type={"submit"}
+          variant={"text"}
+          color={"primary"}
+          onClick={() => goToSign(history)}
+        >
+          Não possui conta? Cadastre-se!
+        </Button>
+      
+    </ScreenContainer>
   );
 };
 export default LoginPage;
