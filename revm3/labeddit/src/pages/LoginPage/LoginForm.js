@@ -2,21 +2,25 @@ import React from "react";
 
 import useForm from "../../hooks/useForm";
 import { useHistory } from "react-router-dom";
-import { goToFeed } from "../../routes/coordinator";
+
 import { InputsContainer } from "./styled";
 import { TextField, Button, Box, CircularProgress } from "@material-ui/core";
+import {login} from '../../services/user'
 
-const LoginForm = () => {
+
+const LoginForm = ({ setRightButtonText}) => {
   const history = useHistory();
   const [form, onChange, clear] = useForm({ email: "", password: "" });
 
   const onSubmitForm = (e) => {
     e.preventDefault();
+    login(form, clear, history, setRightButtonText)
   };
 
+  
   return (
     <InputsContainer>
-      <form OnSubmit={onSubmitForm}>
+      <form onSubmit={onSubmitForm}>
         <TextField
           name={"email"}
           value={form.email}
@@ -46,7 +50,6 @@ const LoginForm = () => {
             color={"primary"}
             margin={"normal"}
             fullWidth
-            onClick={() => goToFeed(history)}
           >
             Entrar
           </Button>

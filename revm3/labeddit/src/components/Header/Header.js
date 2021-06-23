@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { AppBar, Button } from "@material-ui/core";
 import { StyledToolbar, StyledTypography, StyledBox, ImgLogo } from "../styled";
 import { goToLogin } from "../../routes/coordinator";
@@ -6,13 +6,24 @@ import { useHistory } from "react-router-dom";
 import logo from "../../assets/logo.gif";
 
 
-const Header = () => {
+const Header = ({rightButtonText, setRightButtonText}) => {
+    const token = localStorage.getItem('token')
   const history = useHistory();
-  const token = localStorage.getItem("token");
-
+  
+ 
   const logout = () => {
     localStorage.removeItem("token");
-  };
+  }
+
+    const rightButtonAction = () => {
+        if (token){
+            logout()
+            setRightButtonText('Login')
+            goToLogin(history)
+        } else {
+            goToLogin(history)
+        }
+    };
 
   return (
     <AppBar position="static">
@@ -30,8 +41,8 @@ const Header = () => {
             Labeddit
           </StyledTypography>
         </StyledBox>
-        <Button variant='outlined' size='small' onClick={() => goToLogin(history)} color="secondary">
-          Login
+        <Button variant='outlined' size='small' onClick={rightButtonAction} color="secondary">
+          {rightButtonText}
         </Button>
       </StyledToolbar>
     </AppBar>

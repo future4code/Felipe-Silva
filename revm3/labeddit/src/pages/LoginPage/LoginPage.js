@@ -10,15 +10,17 @@ import {
 } from "./styled";
 import { Button } from "@material-ui/core";
 import LoginForm from "./LoginForm";
+import useUnprotectedPage from '../../hooks/useUnprotectedPage';
 
-const LoginPage = () => {
+const LoginPage = ({setRightButtonText}) => {
+    useUnprotectedPage()
     const history = useHistory();
   return (
     <ScreenContainer>
       <LogoContainer>
         <LogoImage src={login} />
       </LogoContainer>
-      <LoginForm />
+      <LoginForm setRightButtonText={setRightButtonText} />
       
         <Button
           type={"submit"}
