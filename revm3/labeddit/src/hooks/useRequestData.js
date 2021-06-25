@@ -11,8 +11,8 @@ const useRequestData = (initialData, url) => {
           Authorization: localStorage.getItem("token"),
         },
       })
-      .then((res) => {
-        setData(res.data);
+      .then((ans) => {
+        setData(ans.data);
       })
       .catch((err) => {
         console.log(err);

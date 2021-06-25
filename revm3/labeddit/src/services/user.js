@@ -19,8 +19,8 @@ export const signup = (body, clear, history, setRightButtonText, setIsLoading) =
     setIsLoading(true);
     axios
       .post(`${BASE_URL}/signup`, body)
-      .then((res) => {
-        localStorage.setItem("token", res.data.token);
+      .then((ans) => {
+        localStorage.setItem("token", ans.data.token);
         alert("Usuário cadastrado com sucesso!");
         clear();
         setIsLoading(false);
@@ -29,5 +29,6 @@ export const signup = (body, clear, history, setRightButtonText, setIsLoading) =
       })
       .catch((err) => {
         setIsLoading(false);
+        alert(err.response.data.message)
       });
   };
