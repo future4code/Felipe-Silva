@@ -1,3 +1,5 @@
+import { BASE_URL } from "../constants/urls";
+import axios from "axios";
 export const createPost = (body, clear, setIsLoading) => {
   setIsLoading(true);
   axios
